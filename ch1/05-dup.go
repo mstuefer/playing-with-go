@@ -29,6 +29,7 @@ func main() {
 	}
 }
 
+// note map is a 'reference' to the data structure created by make .. copy by reference => any changes will be visible to main function as well
 func countLines(f *os.File, counts map[string]int) {
 	input := bufio.NewScanner(f)
 	for input.Scan() {
